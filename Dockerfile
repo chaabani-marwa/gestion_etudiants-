@@ -1,5 +1,8 @@
 # ÉTAPE 1 : Construction (Utilisation de Maven pour compiler avec JDK 11)
-FROM maven:3.8.7-openjdk-11 AS build
+# NOUVELLE LIGNE (tag standard pour Maven avec JDK 11)
+#FROM maven:3.8.7-jdk-11 AS build
+# OU, pour plus de fiabilité et si vous n'avez pas besoin de la version Maven spécifique :
+FROM maven:3-jdk-11 AS build
 # Définir le répertoire de travail
 WORKDIR /app
 # Copier les fichiers de construction
