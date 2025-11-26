@@ -4,7 +4,6 @@
 FROM eclipse-temurin:11-jdk-focal AS build
 WORKDIR /app
 COPY pom.xml .
-RUN mvn dependency:go-offline
 COPY . .
 RUN mvn clean package -DskipTests
 
