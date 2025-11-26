@@ -14,7 +14,7 @@ RUN mvn clean package -DskipTests
 # openjdk:11-jre-slim est plus léger et suffisant pour l'exécution
 # ÉTAPE 2 : Exécution
 # Utilisez le JRE 11 (plus léger) de Temurin pour l'exécution
-FROM eclipse-temurin:11-jre-focal# <-- Ligne corrigée et robuste
+FROM eclipse-temurin:11-jre-focal
 ENV PORT 8081
 EXPOSE 8081
 COPY --from=build /app/target/*.jar app.jar
