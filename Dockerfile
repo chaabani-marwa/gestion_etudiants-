@@ -19,7 +19,7 @@ RUN mvn clean package -DskipTests
 
 # ÉTAPE 2 : Exécution (Image légère contenant uniquement Java Runtime 11 et le JAR)
 # openjdk:11-jre-slim est plus léger et suffisant pour l'exécution
-FROM openjdk:11-jre-slim
+FROM openjdk:11-jre-slim-buster
 # Définir la variable d'environnement PORT (utilisée par Spring Boot)
 ENV PORT 8081
 # Exposer le port par défaut de Spring Boot
