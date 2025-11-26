@@ -1,5 +1,6 @@
 # eTAPE 1 : Construction (Utilisation de Maven pour compiler avec JDK 11)
-FROM eclipse-temurin:11-jdk-focal AS build
+#FROM eclipse-temurin:11-jdk-focal AS build
+FROM maven:3.9-jdk-11 AS build
 # Definir le repertoire de travail
 WORKDIR /app
 # Copier les fichiers de dependance dabord (pour le cache Docker)
